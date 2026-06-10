@@ -4,10 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Love Story ❤️</title>
-    <!-- Tailwind CSS for styling -->
-    <script src="https://tailwindcss.com"></script>
-    <!-- Romantic Fonts -->
-    <link href="https://googleapis.com" rel="stylesheet">
     <style>
         .font-cursive { font-family: 'Dancing Script', cursive; }
         .font-sans { font-family: 'Inter', sans-serif; }
