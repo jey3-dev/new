@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Love Story ❤️</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        .font-cursive { font-family: 'Dancing Script', cursive; }
+        .font-sans { font-family: 'Inter', sans-serif; }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-pink-50 font-sans text-gray-800 antialiased overflow-x-hidden">
+
+    <!-- Music Player (Hidden Audio, Custom Control) -->
+    <div class="fixed bottom-5 right-5 z-50 bg-white/80 backdrop-blur-md p-3 rounded-full shadow-lg flex items-center space-x-2 border border-pink-200">
+        <audio id="bg-music" loop>
+            <!-- Replace with your own direct audio link (MP3) -->
+            <source src="https://soundhelix.com" type="audio/mpeg">
+        </audio>
+        <button id="music-btn" class="text-2xl focus:outline-none">🎵</button>
+        <span class="text-xs font-semibold text-pink-600 hidden md:inline">Our Song</span>
+    </div>
+
+    <!-- Hero / Movie Poster Section -->
+    <header class="relative min-h-screen flex flex-col items-center justify-center text-center bg-cover bg-center px-4" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://unsplash.com');">
+        <div class="animate-fade-in-up">
+            <span class="text-white uppercase tracking-widest text-sm bg-pink-600/80 px-3 py-1 rounded-full">Now Playing</span>
+            <h1 class="font-cursive text-6xl md:text-8xl text-white mt-4 drop-shadow-md">Our Love Movie</h1>
+            <p class="text-pink-100 text-lg md:text-xl mt-2 tracking-wide">A story of us, miles apart but close at heart</p>
+            <a href="#gallery" class="mt-8 inline-block bg-white text-pink-600 font-semibold px-6 py-3 rounded-full shadow-md hover:bg-pink-100 transition transform hover:scale-105">Open Scrapbook 👇</a>
+        </div>
+    </header>
+
+    <!-- Photo Gallery / Scrapbook Chapters -->
+    <main id="gallery" class="max-w-5xl mx-auto px-4 py-16 space-y-24">
+        <h2 class="text-center font-cursive text-5xl text-pink-600">Chapters of Us</h2>
+
+        <!-- Chapter 1 -->
+        <section class="flex flex-col md:flex-row items-center gap-8 bg-white p-6 rounded-2xl shadow-sm border border-pink-100">
+            <div class="w-full md:w-1/2 overflow-hidden rounded-xl shadow-inner">
+                <img src="https://unsplash.com" alt="Where it started" class="w-full h-80 object-cover hover:scale-105 transition duration-500">
+            </div>
+            <div class="w-full md:w-1/2 space-y-4">
+                <span class="text-xs font-bold text-pink-500 tracking-widest uppercase">Chapter I</span>
+                <h3 class="text-2xl font-semibold text-gray-900">Where It All Began</h3>
+                <p class="text-gray-600 leading-relaxed">From the very first message to the late-night calls that lasted until sunrise. This is the moment everything changed for the better.</p>
+                <span class="inline-block text-sm font-medium text-pink-600 bg-pink-50 px-3 py-1 rounded-md">📅 October 12, 2024</span>
+            </div>
+        </section>
+
+        <!-- Chapter 2 -->
+        <section class="flex flex-col md:flex-row-reverse items-center gap-8 bg-white p-6 rounded-2xl shadow-sm border border-pink-100">
+            <div class="w-full md:w-1/2 overflow-hidden rounded-xl shadow-inner">
+                <img src="https://unsplash.com" alt="Our favorite memory" class="w-full h-80 object-cover hover:scale-105 transition duration-500">
+            </div>
+            <div class="w-full md:w-1/2 space-y-4">
+                <span class="text-xs font-bold text-pink-500 tracking-widest uppercase">Chapter II</span>
+                <h3 class="text-2xl font-semibold text-gray-900">Miles Mean Nothing</h3>
+                <p class="text-gray-600 leading-relaxed">Distance only proves how strong our love is. Every countdown, every airport hug, and every virtual date makes us un-stoppable.</p>
+                <span class="inline-block text-sm font-medium text-pink-600 bg-pink-50 px-3 py-1 rounded-md">📅 January 1, 2025</span>
+            </div>
+        </section>
+    </main>
+
+    <!-- Call to Action / Interactive Surprise Letter Button -->
+    <section class="bg-pink-600 text-white text-center py-16 px-4">
+        <h2 class="font-cursive text-5xl mb-4">A Special Note For You</h2>
+        <p class="max-w-md mx-auto text-pink-100 mb-8 text-sm md:text-base">I wrote a small envelope letter just for your eyes. Click below to crack it open!</p>
+        <button id="open-letter-btn" class="bg-white text-pink-600 font-bold px-8 py-4 rounded-full shadow-lg hover:bg-pink-50 transition transform hover:scale-105">
+            ✉️ Open My Letter
+        </button>
+    </section>
+
+    <!-- Overlay Popup Card (The Letter) -->
+    <div id="letter-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm hidden z-50 items-center justify-center p-4 transition-opacity duration-300">
+        <div class="bg-amber-50 max-w-lg w-full p-8 rounded-xl shadow-2xl border-4 border-double border-amber-200 relative transform scale-95 transition-transform duration-300">
+            <button id="close-letter-btn" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 text-xl font-bold">&times;</button>
+            <h3 class="font-cursive text-4xl text-amber-800 border-b border-amber-200 pb-2 mb-4">My Dearest,</h3>
+            <div class="text-amber-900 space-y-4 leading-relaxed font-serif text-sm md:text-base">
+                <p>Happy Anniversary! Thank you for being my absolute favorite person, my best friend, and my biggest comfort even from afar.</p>
+                <p>No matter how many miles separate us right now, remember that every single day brings us one step closer to never having to say goodbye at airports again.</p>
+                <p>I love you to the moon and back. Always.</p>
+            </div>
+            <p class="font-cursive text-3xl text-amber-800 text-right mt-6">Forever Yours, ❤️</p>
+        </div>
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Music Player Toggle
+        const music = document.getElementById('bg-music');
+        const musicBtn = document.getElementById('music-btn');
+
+        musicBtn.addEventListener('click', () => {
+            if (music.paused) {
+                music.play();
+                musicBtn.textContent = '⏸️';
+            } else {
+                music.pause();
+                musicBtn.textContent = '🎵';
+            }
+        });
+
+        // Love Letter Modal Logic
+        const modal = document.getElementById('letter-modal');
+        const openBtn = document.getElementById('open-letter-btn');
+        const closeBtn = document.getElementById('close-letter-btn');
+
+        openBtn.addEventListener('click', () => {
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            // Play music automatically if allowed by browser when opening letter
+            music.play().catch(() => {});
+            musicBtn.textContent = '⏸️';
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        });
+
+        // Close modal if clicking background wrapper
+        modal.addEventListener('click', (e) => {
+            if(e.target === modal) {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }
+        });
+    </script>
+</body>
+</html>
