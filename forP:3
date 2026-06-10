@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Love Story ❤️</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Romantic Fonts -->
+    <link href="https://googleapis.com" rel="stylesheet">
     <style>
         .font-cursive { font-family: 'Dancing Script', cursive; }
         .font-sans { font-family: 'Inter', sans-serif; }
@@ -12,7 +16,7 @@
 </head>
 <body class="bg-pink-50 font-sans text-gray-800 antialiased overflow-x-hidden">
 
-    <!-- 1. Background Music Player (Streaming Herbal Tea) -->
+    <!-- 1. Background Music Player (Streaming Herbal Tea Direct Link) -->
     <div class="fixed bottom-5 right-5 z-50 bg-white/80 backdrop-blur-md p-3 rounded-full shadow-lg flex items-center space-x-2 border border-pink-200">
         <audio id="bg-music" loop>
             <source src="https://chosic.com" type="audio/mpeg">
@@ -29,12 +33,12 @@
             
             <!-- Side-by-Side Media Grid -->
             <div class="mt-6 flex flex-row items-center justify-center gap-4 max-w-md mx-auto">
-                <!-- 2. Your Custom Morning GIF -->
+                <!-- 2. Your Custom Morning GIF (Uploaded to your GitHub root) -->
                 <div class="w-36 h-36 overflow-hidden rounded-2xl shadow-xl border-4 border-white bg-white flex-shrink-0">
                     <img src="morning.gif" alt="Good Morning Asset" class="w-full h-full object-cover">
                 </div>
                 
-                <!-- 3. Molang Love Heart GIF -->
+                <!-- 3. Molang Love Heart GIF (Direct Link Restored) -->
                 <div class="w-36 h-36 overflow-hidden rounded-2xl shadow-xl border-4 border-white bg-white flex-shrink-0">
                     <img src="https://giphy.com" alt="Molang Heart Animation" class="w-full h-full object-cover">
                 </div>
